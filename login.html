@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Online Scrap Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .auth-hero {
+            background-image: url('assets/images/hero_bg.png');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .auth-hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .auth-hero-title {
+            position: relative;
+            z-index: 2;
+            background: white;
+            padding: 20px 60px;
+            text-align: center;
+        }
+        .auth-hero-title h1 {
+            color: var(--secondary);
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+        .auth-hero-title p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar & Nav (Same as index.html) -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-map-marker-alt"></i> 123 Street, New York, USA</span>
+                <span><i class="fas fa-envelope"></i> info@example.com</span>
+                <span><i class="fas fa-phone-alt"></i> +012 345 67890</span>
+            </div>
+            <div class="top-bar-right">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Online Scrap Portal</a>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="admin-login.html">ADMIN</a>
+                <a href="agent-login.html">STAFF</a>
+                <a href="categories.html">CATEGORY <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+            <div class="auth-buttons">
+                <a href="register.html" class="btn btn-primary">SIGNUP</a>
+                <a href="login.html" class="btn btn-primary" style="background-color: var(--secondary);">LOGIN</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Auth Hero -->
+    <div class="auth-hero">
+        <div class="auth-hero-title">
+            <h1>LOGIN</h1>
+            <p>Home / Login</p>
+        </div>
+    </div>
+
+    <!-- Login Form -->
+    <div class="container">
+        <div class="form-container">
+            <h2 class="page-title">LOGIN TO YOUR PANEL!!</h2>
+            <form action="user-dashboard.html">
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">SUBMIT NOW</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Online Scrap Portal. All Right Reserved.</p>
+            <p style="margin-top: 10px; font-weight: bold; color: var(--primary);">A Project made by Virendra hirwani</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Online Scrap Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-map-marker-alt"></i> 123 Street, New York, USA</span>
+                <span><i class="fas fa-envelope"></i> info@example.com</span>
+                <span><i class="fas fa-phone-alt"></i> +012 345 67890</span>
+            </div>
+            <div class="top-bar-right">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Online Scrap Portal</a>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="categories.html">CATEGORY <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
+                <a href="contact.html">CONTACT</a>
+                <a href="user-dashboard.html" class="active">MY ACCOUNT <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
+            </div>
+            <div class="auth-buttons">
+                <a href="cart.html" style="color: var(--primary); font-size: 1.2rem; margin-right: 15px;"><i class="fas fa-shopping-cart"></i></a>
+                <a href="index.html" class="btn btn-primary" style="background-color: var(--danger);">LOGOUT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div style="background-color: #f8f9fa; border-bottom: 1px solid #eee; padding: 20px 0; text-align: center;">
+        <h2 style="text-transform: uppercase; color: var(--secondary);">PROFILE</h2>
+        <p style="color: #777; font-size: 0.9rem;">Home / Profile</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container" style="margin-top: 50px; margin-bottom: 50px;">
+        
+        <div style="display: flex; gap: 30px;">
+            <!-- User Sidebar menu -->
+            <div style="width: 250px; flex-shrink: 0;">
+                <div style="background: white; border: 1px solid #ddd; border-radius: 4px;">
+                    <a href="user-dashboard.html" style="display: block; padding: 15px; border-bottom: 1px solid #ddd; background: var(--bg-light); font-weight: bold; color: var(--primary);">Update Profile</a>
+                    <a href="#" style="display: block; padding: 15px; border-bottom: 1px solid #ddd;">Change Password</a>
+                    <a href="#" style="display: block; padding: 15px; border-bottom: 1px solid #ddd;">My Bookings</a>
+                    <a href="index.html" style="display: block; padding: 15px;">Logout</a>
+                </div>
+            </div>
+
+            <!-- Profile Form -->
+            <div style="flex: 1; background: white; border: 1px solid #ddd; border-radius: 4px; padding: 30px;">
+                <h3 style="margin-bottom: 25px; font-size: 1.2rem; color: var(--secondary);">UPDATE OR VIEW YOUR PROFILE!!</h3>
+                
+                <form>
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" class="form-control" value="Test User">
+                    </div>
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input type="email" class="form-control" value="test@gmail.com" readonly style="background-color: #e9ecef;">
+                    </div>
+                    <div class="form-group">
+                        <label>Your Mobile</label>
+                        <input type="text" class="form-control" value="1234567890">
+                    </div>
+                    <div class="form-group">
+                        <label>Registration Date</label>
+                        <input type="text" class="form-control" value="2025-06-03 19:54:52" readonly style="background-color: #e9ecef;">
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary" style="width: 100%;">UPDATE NOW</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Online Scrap Portal. All Right Reserved.</p>
+            <p style="margin-top: 10px; font-weight: bold; color: var(--primary);">A Project made by Virendra hirwani</p>
+        </div>
+    </footer>
+
+</body>
+</html>

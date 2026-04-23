@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrap Agent Dashboard - Online Scrap Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            Online Scrap Portal | Staff
+        </div>
+        <div style="padding: 15px 20px; display: flex; align-items: center; border-bottom: 1px solid #4f5962;">
+            <i class="fas fa-user-circle fa-2x" style="margin-right: 10px; color: #c2c7d0;"></i>
+            <span style="color: #c2c7d0; font-weight: 600;">test123</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="agent-dashboard.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="#"><i class="fas fa-book"></i> Scrap Bookings <i class="fas fa-angle-left" style="float: right;"></i></a>
+            <a href="#"><i class="fas fa-calendar-alt"></i> B/w Dates Report</a>
+            <a href="#"><i class="fas fa-search"></i> Search Booking</a>
+            <a href="#"><i class="fas fa-cogs"></i> Account Settings <i class="fas fa-angle-left" style="float: right;"></i></a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="main-header">
+            <div>
+                <i class="fas fa-bars" style="cursor: pointer; color: #666; font-size: 1.2rem;"></i>
+            </div>
+            <div style="color: #666;">
+                Home / Dashboard
+            </div>
+            <div style="margin-left:auto;">
+                <a href="index.html" class="btn btn-primary" style="background-color: var(--danger); padding: 5px 10px; font-size: 0.75rem;">Logout</a>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <h2 style="margin-bottom: 20px; font-weight: 400;">Dashboard</h2>
+
+            <div class="stats-grid">
+                <div class="stat-card" style="background-color: #17a2b8;">
+                    <h3>5</h3>
+                    <p>All bookings</p>
+                    <i class="fas fa-book bg-icon"></i>
+                    <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+                <div class="stat-card" style="background-color: #007bff;">
+                    <h3>1</h3>
+                    <p>Assigned bookings</p>
+                    <i class="fas fa-user-plus bg-icon"></i>
+                    <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+                <div class="stat-card bg-warning">
+                    <h3>0</h3>
+                    <p>Agent on the way</p>
+                    <i class="fas fa-truck bg-icon"></i>
+                    <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+                <div class="stat-card bg-success">
+                    <h3>0</h3>
+                    <p>Agent Reached</p>
+                    <i class="fas fa-map-marker-alt bg-icon"></i>
+                    <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+                <div class="stat-card bg-danger">
+                    <h3>2</h3>
+                    <p>Scrap Collected</p>
+                    <i class="fas fa-box bg-icon"></i>
+                    <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+                <div class="stat-card bg-info">
+                    <h3>2</h3>
+                    <p>Scrap Recycled</p>
+                    <i class="fas fa-recycle bg-icon"></i>
+                    <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <footer style="background: white; color: #666; text-align: left; padding: 15px 20px; border-top: 1px solid #ddd; font-size: 0.85rem; display: flex; justify-content: space-between;">
+            <div>
+                <strong>Online Scrap Portal</strong> | A Project made by Virendra hirwani
+            </div>
+            <div>
+                Version 1.0
+            </div>
+        </footer>
+    </main>
+</div>
+
+</body>
+</html>
