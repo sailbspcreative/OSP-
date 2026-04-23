@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Waste - Online Scrap Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .page-header { background-color: var(--secondary); color: white; padding: 60px 0; text-align: center; }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .item-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; margin-bottom: 60px; }
+        .item-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s ease; display: flex; flex-direction: column; border: 1px solid #eee; }
+        .item-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+        .item-icon { font-size: 4rem; color: var(--primary); text-align: center; padding: 30px 0; background-color: var(--bg-light); border-bottom: 1px solid #eee; }
+        .item-details { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .item-title { font-size: 1.2rem; font-weight: 700; color: var(--text-dark); margin-bottom: 10px; }
+        .item-price { font-size: 1.1rem; color: var(--success); font-weight: bold; margin-bottom: 15px; }
+        .add-to-cart-container { margin-top: auto; display: flex; gap: 10px; }
+        .qty-input { width: 80px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        .btn-add { flex-grow: 1; background-color: var(--primary); color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background-color 0.3s ease; }
+        .btn-add:hover { background-color: #d39e00; }
+    </style>
+</head>
+<body>
+    <div class="top-bar"><div class="container"><div class="top-bar-left"><span><i class="fas fa-map-marker-alt"></i> 123 Street, NY, USA</span></div></div></div>
+    <nav class="navbar"><div class="container"><a href="index.html" class="logo">Online Scrap Portal</a><div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <div class="nav-links"><a href="index.html">HOME</a><a href="categories.html" class="active">CATEGORY</a><a href="contact.html">CONTACT</a></div><div class="auth-buttons"><a href="cart.html" style="color: var(--primary); font-size: 1.2rem; margin-right: 15px;"><i class="fas fa-shopping-cart"></i></a></div></div></nav>
+
+    <div class="page-header"><div class="container"><h1>E-Waste Scrap</h1><p>Select specific electronics items you want to sell.</p></div></div>
+
+    <div class="container">
+        <div class="item-grid">
+            <div class="item-card"><div class="item-icon"><i class="fas fa-laptop"></i></div><div class="item-details"><div class="item-title">Scrap Laptops</div><div class="item-price">₹300.00 / piece</div><div class="add-to-cart-container"><input type="number" class="qty-input" placeholder="Qty" min="1"><button class="btn-add" onclick="alert('Added!')"><i class="fas fa-cart-plus"></i> Add</button></div></div></div>
+            <div class="item-card"><div class="item-icon"><i class="fas fa-mobile-alt"></i></div><div class="item-details"><div class="item-title">Mobile Phones</div><div class="item-price">₹40.00 / piece</div><div class="add-to-cart-container"><input type="number" class="qty-input" placeholder="Qty" min="1"><button class="btn-add" onclick="alert('Added!')"><i class="fas fa-cart-plus"></i> Add</button></div></div></div>
+            <div class="item-card"><div class="item-icon"><i class="fas fa-desktop"></i></div><div class="item-details"><div class="item-title">CRT Monitors</div><div class="item-price">₹150.00 / piece</div><div class="add-to-cart-container"><input type="number" class="qty-input" placeholder="Qty" min="1"><button class="btn-add" onclick="alert('Added!')"><i class="fas fa-cart-plus"></i> Add</button></div></div></div>
+            <div class="item-card"><div class="item-icon"><i class="fas fa-microchip"></i></div><div class="item-details"><div class="item-title">Motherboards</div><div class="item-price">₹200.00 / kg</div><div class="add-to-cart-container"><input type="number" class="qty-input" placeholder="Qty" min="1"><button class="btn-add" onclick="alert('Added!')"><i class="fas fa-cart-plus"></i> Add</button></div></div></div>
+        </div>
+    </div>
+
+    <footer><div class="container"><p>&copy; 2026 Online Scrap Portal. All Right Reserved.</p><p style="margin-top: 10px; font-weight: bold; color: var(--primary);">A Project made by DAMINI SINHA</p></div></footer>
+</body>
+</html>

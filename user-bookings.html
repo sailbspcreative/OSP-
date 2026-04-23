@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Dashboard - Online Scrap Portal</title>
+    <title>My Bookings - User Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -47,8 +47,8 @@
 
     <!-- Header -->
     <div style="background-color: #f8f9fa; border-bottom: 1px solid #eee; padding: 20px 0; text-align: center;">
-        <h2 style="text-transform: uppercase; color: var(--secondary);">PROFILE</h2>
-        <p style="color: #777; font-size: 0.9rem;">Home / Profile</p>
+        <h2 style="text-transform: uppercase; color: var(--secondary);">MY BOOKINGS</h2>
+        <p style="color: #777; font-size: 0.9rem;">Home / My Bookings</p>
     </div>
 
     <!-- Main Content -->
@@ -58,37 +58,47 @@
             <!-- User Sidebar menu -->
             <div style="width: 250px; flex-shrink: 0;">
                 <div style="background: white; border: 1px solid #ddd; border-radius: 4px;">
-                    <a href="user-dashboard.html" style="display: block; padding: 15px; border-bottom: 1px solid #ddd; background: var(--bg-light); font-weight: bold; color: var(--primary);">Update Profile</a>
+                    <a href="user-dashboard.html" style="display: block; padding: 15px; border-bottom: 1px solid #ddd;">Update Profile</a>
                     <a href="user-change-password.html" style="display: block; padding: 15px; border-bottom: 1px solid #ddd;">Change Password</a>
-                    <a href="user-bookings.html" style="display: block; padding: 15px; border-bottom: 1px solid #ddd;">My Bookings</a>
+                    <a href="user-bookings.html" style="display: block; padding: 15px; border-bottom: 1px solid #ddd; background: var(--bg-light); font-weight: bold; color: var(--primary);">My Bookings</a>
                     <a href="index.html" style="display: block; padding: 15px;">Logout</a>
                 </div>
             </div>
 
-            <!-- Profile Form -->
+            <!-- Bookings List -->
             <div style="flex: 1; background: white; border: 1px solid #ddd; border-radius: 4px; padding: 30px;">
-                <h3 style="margin-bottom: 25px; font-size: 1.2rem; color: var(--secondary);">UPDATE OR VIEW YOUR PROFILE!!</h3>
+                <h3 style="margin-bottom: 25px; font-size: 1.2rem; color: var(--secondary);">MY BOOKING HISTORY</h3>
                 
-                <form>
-                    <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="text" class="form-control" value="Test User">
-                    </div>
-                    <div class="form-group">
-                        <label>Your Email</label>
-                        <input type="email" class="form-control" value="test@gmail.com" readonly style="background-color: #e9ecef;">
-                    </div>
-                    <div class="form-group">
-                        <label>Your Mobile</label>
-                        <input type="text" class="form-control" value="1234567890">
-                    </div>
-                    <div class="form-group">
-                        <label>Registration Date</label>
-                        <input type="text" class="form-control" value="2025-06-03 19:54:52" readonly style="background-color: #e9ecef;">
-                    </div>
-                    
-                    <button type="button" class="btn btn-primary" style="width: 100%;">UPDATE NOW</button>
-                </form>
+                <div class="table-responsive">
+                    <table>
+                        <thead style="background-color: #f8f9fa;">
+                            <tr>
+                                <th style="padding: 12px; border: 1px solid #ddd;">Booking ID</th>
+                                <th style="padding: 12px; border: 1px solid #ddd;">Booking Date/Time</th>
+                                <th style="padding: 12px; border: 1px solid #ddd;">Status</th>
+                                <th style="padding: 12px; border: 1px solid #ddd;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 12px; border: 1px solid #ddd;">#16</td>
+                                <td style="padding: 12px; border: 1px solid #ddd;">07 Jun 2025, 10:45 AM</td>
+                                <td style="padding: 12px; border: 1px solid #ddd;"><span style="background-color: #ffc107; color: black; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Pending</span></td>
+                                <td style="padding: 12px; border: 1px solid #ddd;">
+                                    <a href="#" style="color: var(--primary); font-weight: bold; text-decoration: underline;">View Details</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border: 1px solid #ddd;">#12</td>
+                                <td style="padding: 12px; border: 1px solid #ddd;">01 Jun 2025, 02:15 PM</td>
+                                <td style="padding: 12px; border: 1px solid #ddd;"><span style="background-color: #28a745; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Completed</span></td>
+                                <td style="padding: 12px; border: 1px solid #ddd;">
+                                    <a href="#" style="color: var(--primary); font-weight: bold; text-decoration: underline;">View Details</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completed Bookings - Staff Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-active-nav="nav-agent-completed-bookings">
+
+<div class="dashboard-layout">
+    <div id="agent-sidebar-container"></div>
+    <main class="main-content">
+        <div id="agent-header-container"></div>
+
+        <div class="content-wrapper">
+            <h2 class="page-title">Completed Scrap Bookings</h2>
+            
+            <div style="background: white; padding: 20px; border-radius: 4px; box-shadow: var(--shadow-sm);">
+                <div style="display: flex; justify-content: flex-end; margin-bottom: 15px;">
+                    <input type="text" class="form-control" placeholder="Search..." style="width: 250px;">
+                </div>
+                
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Bookings No</th>
+                                <th>Name</th>
+                                <th>Mobile No</th>
+                                <th>Booking Date/Time</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>12</td>
+                                <td>Sunita Sharma</td>
+                                <td>9988776655</td>
+                                <td>01 Jun 2025, 02:15 PM</td>
+                                <td><span class="badge" style="background-color: #28a745; color: white; padding: 3px 8px; border-radius: 3px; font-size: 0.8rem;">Completed</span></td>
+                                <td>
+                                    <a href="#" class="btn" style="background-color: #007bff; color: white; padding: 5px 10px; font-size: 0.7rem; text-transform: none;">View Details</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+
+        <footer style="background: white; color: #666; text-align: left; padding: 15px 20px; border-top: 1px solid #ddd; font-size: 0.85rem; display: flex; justify-content: space-between;">
+            <div>
+                <strong>Online Scrap Portal</strong> | A Project made by DAMINI SINHA
+            </div>
+            <div>
+                Version 1.0
+            </div>
+        </footer>
+    </main>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

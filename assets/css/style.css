@@ -563,3 +563,115 @@ tr:hover {
 .badge-pending { background: #ffeeba; color: #856404; }
 .badge-approved { background: #d4edda; color: #155724; }
 .badge-rejected { background: #f8d7da; color: #721c24; }
+
+/* ---------------------------------
+   MOBILE RESPONSIVENESS
+----------------------------------- */
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.sidebar-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+@media (max-width: 992px) {
+  /* Public Nav Menu Mobile */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--text-light);
+    box-shadow: var(--shadow-sm);
+    padding: 20px;
+    gap: 15px;
+    z-index: 1000;
+  }
+  
+  .nav-links.show {
+    display: flex;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+
+  .auth-buttons {
+    display: none;
+  }
+  
+  /* Dashboard Mobile */
+  .dashboard-layout {
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  .sidebar {
+    position: absolute;
+    height: 100%;
+    min-height: 100vh;
+    left: -250px;
+    z-index: 1050;
+    transition: left 0.3s ease;
+  }
+  
+  .sidebar.show {
+    left: 0;
+  }
+  
+  .sidebar-toggle {
+    display: block;
+  }
+  
+  .main-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Grids */
+  .category-grid, .stats-grid, .item-grid, .how-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cart-container {
+    flex-direction: column;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  /* Top Bar Stacking */
+  .top-bar .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .top-bar-left, .top-bar-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+  }
+  
+  /* User Dashboard Stacking */
+  .container > div[style*="display: flex"] {
+    flex-direction: column;
+  }
+  .container > div[style*="display: flex"] > div:first-child {
+    width: 100% !important;
+  }
+}

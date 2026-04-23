@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart - Online Scrap Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .page-header { background-color: var(--secondary); color: white; padding: 60px 0; text-align: center; }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        
+        .cart-container {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .cart-items {
+            flex: 2;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            padding: 20px;
+        }
+        
+        .cart-summary {
+            flex: 1;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            padding: 20px;
+            height: fit-content;
+        }
+
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .cart-table th, .cart-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-table th {
+            background-color: var(--bg-light);
+            color: var(--secondary);
+        }
+
+        .item-remove {
+            color: var(--danger);
+            cursor: pointer;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .summary-total {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--success);
+        }
+
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .checkout-btn:hover {
+            background-color: #d39e00;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-map-marker-alt"></i> 123 Street, New York, USA</span>
+                <span><i class="fas fa-envelope"></i> info@example.com</span>
+                <span><i class="fas fa-phone-alt"></i> +012 345 67890</span>
+            </div>
+            <div class="top-bar-right">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Online Scrap Portal</a>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="admin-login.html">ADMIN</a>
+                <a href="agent-login.html">STAFF</a>
+                <a href="categories.html">CATEGORY</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+            <div class="auth-buttons">
+                <a href="cart.html" style="color: var(--primary); font-size: 1.2rem; margin-right: 15px;"><i class="fas fa-shopping-cart"></i></a>
+                <a href="register.html" class="btn btn-primary">SIGNUP</a>
+                <a href="login.html" class="btn btn-primary" style="background-color: var(--secondary);">LOGIN</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Your Scrap Cart</h1>
+            <p>Review the items you wish to sell and schedule a pickup.</p>
+        </div>
+    </div>
+
+    <!-- Cart Content -->
+    <div class="container">
+        <div class="cart-container">
+            <div class="cart-items">
+                <h3 style="margin-bottom: 20px; color: var(--secondary);">Selected Items</h3>
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Category</th>
+                            <th>Est. Price</th>
+                            <th>Qty</th>
+                            <th>Total</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>PET Bottles</strong></td>
+                            <td>Plastics</td>
+                            <td>₹12.00 / kg</td>
+                            <td>5 kg</td>
+                            <td><strong>₹60.00</strong></td>
+                            <td><i class="fas fa-trash item-remove"></i></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Newspapers</strong></td>
+                            <td>Paper</td>
+                            <td>₹15.00 / kg</td>
+                            <td>10 kg</td>
+                            <td><strong>₹150.00</strong></td>
+                            <td><i class="fas fa-trash item-remove"></i></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Iron Scrap</strong></td>
+                            <td>Metals</td>
+                            <td>₹28.00 / kg</td>
+                            <td>2 kg</td>
+                            <td><strong>₹56.00</strong></td>
+                            <td><i class="fas fa-trash item-remove"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-top: 20px;">
+                    <a href="categories.html" style="color: var(--primary); text-decoration: underline;"><i class="fas fa-arrow-left"></i> Add more scrap</a>
+                </div>
+            </div>
+            
+            <div class="cart-summary">
+                <h3 style="margin-bottom: 20px; color: var(--secondary);">Pickup Summary</h3>
+                <div class="summary-row">
+                    <span>Total Items:</span>
+                    <span>3</span>
+                </div>
+                <div class="summary-row">
+                    <span>Total Estimated Weight:</span>
+                    <span>17 kg</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Estimated Payout:</span>
+                    <span>₹266.00</span>
+                </div>
+                <p style="font-size: 0.85rem; color: #666; margin-bottom: 20px;">* Final payout will be calculated by the agent after weighing the scrap at your location.</p>
+                
+                <a href="login.html" class="checkout-btn">Schedule Pickup <i class="fas fa-truck" style="margin-left: 8px;"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Online Scrap Portal. All Right Reserved.</p>
+            <p style="margin-top: 10px; font-weight: bold; color: var(--primary);">A Project made by DAMINI SINHA</p>
+        </div>
+    </footer>
+</body>
+</html>

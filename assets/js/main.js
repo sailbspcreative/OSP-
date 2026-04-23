@@ -16,9 +16,13 @@ document.addEventListener("DOMContentLoaded", function() {
             .catch(error => console.error('Error loading component:', error));
     }
 
-    // Load Admin Sidebar and Header
+    // Load Admin Sidebar and Header if containers exist
     loadComponent('assets/components/admin-sidebar.html', 'admin-sidebar-container', initializeSidebar);
     loadComponent('assets/components/admin-header.html', 'admin-header-container');
+
+    // Load Agent Sidebar and Header if containers exist
+    loadComponent('assets/components/agent-sidebar.html', 'agent-sidebar-container', initializeSidebar);
+    loadComponent('assets/components/agent-header.html', 'agent-header-container');
 
     function initializeSidebar() {
         // Highlight active link based on current URL or a specific ID set in the body
@@ -27,7 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const activeLink = document.getElementById(activeNavId);
             if (activeLink) {
                 // Remove active from dashboard
-                document.getElementById('nav-dashboard').classList.remove('active');
+                const dashboardLink = document.getElementById('nav-dashboard') || document.getElementById('nav-agent-dashboard');
+                if (dashboardLink) dashboardLink.classList.remove('active');
                 activeLink.classList.add('active');
                 activeLink.style.color = "white";
                 
@@ -63,4 +68,22 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     }
+
+    // Mobile Navigation Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+        });
+    }
+
+    // Dashboard Sidebar Toggle
+    document.body.addEventListener('click', function(e) {
+        if (e.target.closest('#sidebar-toggle') || e.target.closest('#agent-sidebar-toggle') || e.target.closest('.sidebar-toggle')) {
+            const sidebar = document.querySelector('.sidebar');
+            if (sidebar) sidebar.classList.toggle('show');
+        }
+    });
+
 });
