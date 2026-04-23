@@ -372,6 +372,30 @@ footer a:hover {
   margin-right: 10px;
 }
 
+.sidebar-nav i.right-icon {
+  float: right;
+  width: auto;
+  margin-right: 0;
+  margin-top: 3px;
+  font-size: 0.8rem;
+  transition: transform 0.2s;
+}
+
+.dropdown-menu {
+  display: none;
+  background-color: #2a2e33;
+}
+
+.dropdown-menu a {
+  padding: 10px 20px 10px 40px;
+  font-size: 0.85rem;
+}
+
+.dropdown-menu a i {
+  font-size: 0.6rem;
+  margin-right: 15px;
+}
+
 .main-content {
   flex: 1;
   background-color: #f4f6f9;

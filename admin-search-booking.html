@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Booking - Online Scrap Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-active-nav="nav-search-booking">
+
+<div class="dashboard-layout">
+    <div id="admin-sidebar-container"></div>
+    <main class="main-content">
+        <div id="admin-header-container"></div>
+
+        <div class="content-wrapper">
+            <h2 class="page-title">Search Scrap Booking</h2>
+            
+            <div style="background: white; border-top: 4px solid #007bff; padding: 20px; border-radius: 4px; box-shadow: var(--shadow-sm); max-width: 800px; margin-bottom: 30px;">
+                <div style="background: #007bff; color: white; padding: 10px 15px; margin: -20px -20px 20px -20px; border-radius: 4px 4px 0 0;">
+                    Search Scrap Booking
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label>Search (Fullname, Email, MobileNumber or Booking ID)</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="background-color: #007bff;">Submit</button>
+                </form>
+            </div>
+            
+            <div style="background: white; padding: 20px; border-radius: 4px; box-shadow: var(--shadow-sm);">
+                <h3 style="margin-bottom: 15px; font-size: 1rem; color: #555;">Search Results for "16"</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Booking No</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Mobile No</th>
+                                <th>Booking Date/Time</th>
+                                <th>Status</th>
+                                <th>Posting Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>16</td>
+                                <td>Abir Singh</td>
+                                <td>abir@gmail.com</td>
+                                <td>7894561236</td>
+                                <td>07 Jun 2025, 10:45 AM</td>
+                                <td><span class="badge badge-pending">Pending</span></td>
+                                <td>06 Jun 2025, 08:44 AM</td>
+                                <td>
+                                    <a href="#" class="btn" style="background-color: #007bff; color: white; padding: 5px 10px; font-size: 0.7rem; text-transform: none;">View</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+
+        <footer style="background: white; color: #666; text-align: left; padding: 15px 20px; border-top: 1px solid #ddd; font-size: 0.85rem; display: flex; justify-content: space-between;">
+            <div>
+                <strong>Online Scrap Portal</strong> | A Project made by Virendra hirwani
+            </div>
+            <div>
+                Version 1.0
+            </div>
+        </footer>
+    </main>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

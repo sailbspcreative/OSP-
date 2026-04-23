@@ -1,0 +1,66 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Utility to load HTML components
+    function loadComponent(url, elementId, callback) {
+        const container = document.getElementById(elementId);
+        if (!container) return;
+
+        fetch(url)
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.text();
+            })
+            .then(html => {
+                container.innerHTML = html;
+                if (callback) callback();
+            })
+            .catch(error => console.error('Error loading component:', error));
+    }
+
+    // Load Admin Sidebar and Header
+    loadComponent('assets/components/admin-sidebar.html', 'admin-sidebar-container', initializeSidebar);
+    loadComponent('assets/components/admin-header.html', 'admin-header-container');
+
+    function initializeSidebar() {
+        // Highlight active link based on current URL or a specific ID set in the body
+        const activeNavId = document.body.getAttribute('data-active-nav');
+        if (activeNavId) {
+            const activeLink = document.getElementById(activeNavId);
+            if (activeLink) {
+                // Remove active from dashboard
+                document.getElementById('nav-dashboard').classList.remove('active');
+                activeLink.classList.add('active');
+                activeLink.style.color = "white";
+                
+                // Open parent dropdown if it exists
+                const parentDropdown = activeLink.closest('.dropdown-menu');
+                if (parentDropdown) {
+                    parentDropdown.style.display = 'block';
+                    parentDropdown.previousElementSibling.querySelector('.right-icon').classList.replace('fa-angle-left', 'fa-angle-down');
+                }
+            }
+        }
+
+        // Handle Dropdown toggles
+        const toggles = document.querySelectorAll('.dropdown-toggle');
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const menu = this.nextElementSibling;
+                const icon = this.querySelector('.right-icon');
+                
+                if (menu.style.display === 'block') {
+                    menu.style.display = 'none';
+                    icon.classList.replace('fa-angle-down', 'fa-angle-left');
+                } else {
+                    // Close others
+                    document.querySelectorAll('.dropdown-menu').forEach(m => {
+                        m.style.display = 'none';
+                        m.previousElementSibling.querySelector('.right-icon').classList.replace('fa-angle-down', 'fa-angle-left');
+                    });
+                    menu.style.display = 'block';
+                    icon.classList.replace('fa-angle-left', 'fa-angle-down');
+                }
+            });
+        });
+    }
+});
