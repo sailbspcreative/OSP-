@@ -29,8 +29,13 @@ app.post('/api/auth/login', (req, res) => {
 
 // Fallback removed for simplicity
 
-// Start Server
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-    console.log(`Open http://localhost:${PORT}/index.html to view the site.`);
-});
+// Start Server only if not running on Vercel
+if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+    app.listen(PORT, () => {
+        console.log(`Server is running on http://localhost:${PORT}`);
+        console.log(`Open http://localhost:${PORT}/index.html to view the site.`);
+    });
+}
+
+// Export the app for Vercel
+module.exports = app;
