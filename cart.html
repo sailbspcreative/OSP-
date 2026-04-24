@@ -180,8 +180,26 @@
                         </tr>
                     </tbody>
                 </table>
-                <div style="margin-top: 20px;">
+                <div style="margin-top: 20px; margin-bottom: 30px;">
                     <a href="categories.html" style="color: var(--primary); text-decoration: underline;"><i class="fas fa-arrow-left"></i> Add more scrap</a>
+                </div>
+
+                <hr style="border: none; border-top: 1px solid #eee; margin-bottom: 20px;">
+                
+                <h3 style="margin-bottom: 20px; color: var(--secondary);">Pickup Details</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: bold; color: #555;">Preferred Date <span style="color: var(--danger);">*</span></label>
+                        <input type="date" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;" required>
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: bold; color: #555;">Preferred Time <span style="color: var(--danger);">*</span></label>
+                        <input type="time" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;" required>
+                    </div>
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 8px; font-weight: bold; color: #555;">Pickup Address <span style="color: var(--danger);">*</span></label>
+                    <textarea rows="3" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; resize: vertical; font-family: inherit;" placeholder="Enter your full address including landmark and pincode..." required></textarea>
                 </div>
             </div>
             
