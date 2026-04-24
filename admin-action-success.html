@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Successful - Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .dashboard-container { display: flex; min-height: calc(100vh - 140px); }
+        .main-content { flex: 1; padding: 30px; background-color: #f4f6f9; display: flex; align-items: center; justify-content: center; }
+        
+        .confirmation-card {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            border-top: 5px solid var(--primary);
+        }
+        
+        .success-icon {
+            font-size: 5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+        
+        @keyframes popIn {
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        .confirmation-title {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .confirmation-msg {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="admin-header-container"></div>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div id="admin-sidebar-container"></div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="confirmation-card">
+                <i class="fas fa-check-circle success-icon"></i>
+                <h1 class="confirmation-title">Action Successful!</h1>
+                
+                <p class="confirmation-msg">
+                    The details have been securely saved and updated in the system database. The changes are now live.
+                </p>
+                
+                <div class="action-buttons">
+                    <button onclick="window.history.back()" class="btn btn-primary btn-outline"><i class="fas fa-arrow-left"></i> Go Back</button>
+                    <a href="admin-dashboard.html" class="btn btn-primary"><i class="fas fa-home"></i> Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
