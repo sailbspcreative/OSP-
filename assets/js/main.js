@@ -86,4 +86,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    // Global Auth State Toggle for Public Navbar
+    const authButtonsContainer = document.querySelector('.auth-buttons');
+    if (authButtonsContainer && localStorage.getItem('userLoggedIn') === 'true') {
+        authButtonsContainer.innerHTML = `
+            <a href="cart.html" style="color: var(--primary); font-size: 1.2rem; margin-right: 15px;"><i class="fas fa-shopping-cart"></i></a>
+            <a href="user-dashboard.html" class="btn btn-primary" style="background-color: var(--secondary); border-color: var(--secondary);">MY ACCOUNT</a>
+            <a href="#" id="logout-btn" class="btn btn-danger" style="background-color: #dc3545; color: white; padding: 10px 25px; border-radius: 4px; font-weight: bold; text-decoration: none;">LOGOUT</a>
+        `;
+        
+        document.getElementById('logout-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('userLoggedIn');
+            window.location.href = 'index.html';
+        });
+    }
+
 });

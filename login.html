@@ -91,7 +91,7 @@
     <div class="container">
         <div class="form-container">
             <h2 class="page-title">LOGIN TO YOUR PANEL!!</h2>
-            <form action="user-dashboard.html">
+            <form action="user-dashboard.html" onsubmit="localStorage.setItem('userLoggedIn', 'true');">
                 <div class="form-group">
                     <input type="email" class="form-control" placeholder="Your Email" required>
                 </div>
