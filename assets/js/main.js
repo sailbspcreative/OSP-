@@ -102,4 +102,41 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // Global Toast Notification System
+    window.showToast = function(message, isError = false) {
+        const popup = document.createElement('div');
+        popup.style.position = 'fixed';
+        popup.style.top = '20px';
+        popup.style.right = '20px';
+        popup.style.backgroundColor = isError ? 'var(--danger)' : 'var(--success)';
+        popup.style.color = 'white';
+        popup.style.padding = '15px 25px';
+        popup.style.borderRadius = '4px';
+        popup.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+        popup.style.zIndex = '9999';
+        popup.style.transition = 'all 0.3s ease';
+        popup.style.opacity = '0';
+        popup.style.transform = 'translateY(-20px)';
+        popup.style.fontWeight = 'bold';
+        popup.style.display = 'flex';
+        popup.style.alignItems = 'center';
+        popup.style.gap = '10px';
+        
+        const icon = isError ? 'fa-exclamation-circle' : 'fa-check-circle';
+        popup.innerHTML = \`<i class="fas \${icon}" style="font-size: 1.2rem;"></i> \${message}\`;
+        
+        document.body.appendChild(popup);
+        
+        setTimeout(() => {
+            popup.style.opacity = '1';
+            popup.style.transform = 'translateY(0)';
+        }, 10);
+        
+        setTimeout(() => {
+            popup.style.opacity = '0';
+            popup.style.transform = 'translateY(-20px)';
+            setTimeout(() => popup.remove(), 300);
+        }, 3000);
+    };
+
 });
