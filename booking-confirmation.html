@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed - Online Scrap Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .confirmation-container {
+            max-width: 600px;
+            margin: 80px auto;
+            background: white;
+            padding: 50px 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+        }
+        
+        .success-icon {
+            font-size: 5rem;
+            color: var(--success);
+            margin-bottom: 20px;
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+        
+        @keyframes popIn {
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        .confirmation-title {
+            color: var(--secondary);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .booking-ref {
+            background-color: var(--bg-light);
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            margin: 25px 0;
+            border: 1px dashed #ccc;
+        }
+        
+        .booking-ref strong {
+            color: var(--primary);
+            letter-spacing: 1px;
+        }
+        
+        .confirmation-msg {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-map-marker-alt"></i> Rajnandgaon, Chhattisgarh</span>
+                <span><i class="fas fa-envelope"></i> info@onlinescrapportal.com</span>
+                <span><i class="fas fa-phone-alt"></i> +91 7987393599</span>
+            </div>
+            <div class="top-bar-right">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Online Scrap Portal</a>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="admin-login.html">ADMIN</a>
+                <a href="agent-login.html">STAFF</a>
+                <a href="categories.html">CATEGORY</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+            <div class="auth-buttons">
+                <a href="cart.html" style="color: var(--primary); font-size: 1.2rem; margin-right: 15px;"><i class="fas fa-shopping-cart"></i></a>
+                <a href="user-dashboard.html" class="btn btn-primary">MY ACCOUNT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Confirmation Content -->
+    <div class="container">
+        <div class="confirmation-container">
+            <i class="fas fa-check-circle success-icon"></i>
+            <h1 class="confirmation-title">Booking Confirmed!</h1>
+            
+            <p class="confirmation-msg">
+                Thank you for choosing Online Scrap Portal! Your scrap pickup request has been successfully scheduled. An agent will arrive at your provided address at the requested date and time.
+            </p>
+            
+            <div class="booking-ref">
+                Booking Reference: <strong>#OSP-849201</strong>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="user-bookings.html" class="btn btn-primary" style="background-color: var(--secondary);">View My Bookings</a>
+                <a href="index.html" class="btn btn-primary">Return to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Online Scrap Portal. All Right Reserved.</p>
+            <p style="margin-top: 10px; font-weight: bold; color: var(--primary);">A Project made by DAMINI SINHA</p>
+        </div>
+    </footer>
+    
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Generate a random booking number for demo purposes
+        document.addEventListener('DOMContentLoaded', () => {
+            const refNumber = Math.floor(100000 + Math.random() * 900000);
+            const refElement = document.querySelector('.booking-ref strong');
+            if (refElement) {
+                refElement.textContent = `#OSP-${refNumber}`;
+            }
+        });
+    </script>
+</body>
+</html>
